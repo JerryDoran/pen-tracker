@@ -8,26 +8,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Category {
-  id         String      @id @default(uuid())
-  name       String
-  assistants Assistant[]
+model Brand {
+  id   String @id @default(uuid())
+  name String
+  pens Pen[]
 }
 
-model Assistant {
-  id           String   @id @default(uuid())
-  userId       String
-  userName     String
-  src          String
-  name         String   @db.Text
-  description  String
-  instructions String   @db.Text
-  seed         String   @db.Text
-  createdAt    DateTime @default(now())
-  updateAt     DateTime @updatedAt
+model Pen {
+  id          String   @id @default(uuid())
+  userId      String
+  userName    String
+  src         String
+  name        String   @db.Text
+  description String
+  createdAt   DateTime @default(now())
+  updateAt    DateTime @updatedAt
 
-  category   Category @relation(fields: [categoryId], references: [id])
-  categoryId String
+  brand   Brand  @relation(fields: [brandId], references: [id])
+  brandId String
 
-  @@index([categoryId])
+  ink      Ink    @relation(fields: [inkId], references: [id])
+  inkId    String
+  inkColor String
+
+  @@index([brandId])
+  @@index([inkId])
+}
+
+model Ink {
+  id   String @id @default(uuid())
+  name String
+  pens Pen[]
 }

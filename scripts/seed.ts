@@ -4,28 +4,113 @@ const db = new PrismaClient();
 
 async function main() {
   try {
-    await db.category.createMany({
+    // await db.brand.createMany({
+    //   data: [
+    //     {
+    //       name: 'Lamy',
+    //     },
+    //     {
+    //       name: 'Pilot',
+    //     },
+    //     {
+    //       name: 'Sailor',
+    //     },
+    //     {
+    //       name: 'Aurora',
+    //     },
+    //     {
+    //       name: 'Benu',
+    //     },
+    //     {
+    //       name: 'Clairefontaine',
+    //     },
+    //     {
+    //       name: 'Diplomat',
+    //     },
+    //     {
+    //       name: 'Esterbrook',
+    //     },
+    //     {
+    //       name: 'Faber-Castell',
+    //     },
+    //     {
+    //       name: 'Kaweco',
+    //     },
+    //     {
+    //       name: 'Laben',
+    //     },
+    //     {
+    //       name: 'Magna Cart',
+    //     },
+    //     {
+    //       name: 'MontBlanc',
+    //     },
+    //     {
+    //       name: 'Montegrappa',
+    //     },
+    //     {
+    //       name: 'Monteverde',
+    //     },
+    //     {
+    //       name: 'Namiki',
+    //     },
+    //     {
+    //       name: 'Narwhal',
+    //     },
+    //     {
+    //       name: 'Otto Hutt',
+    //     },
+    //     {
+    //       name: 'Pelikan',
+    //     },
+    //     {
+    //       name: 'Platinum',
+    //     },
+    //     {
+    //       name: 'Scribo',
+    //     },
+    //     {
+    //       name: 'Sheaffer',
+    //     },
+    //     {
+    //       name: 'TWSBI',
+    //     },
+    //     {
+    //       name: 'Visconti',
+    //     },
+    //     {
+    //       name: 'Waldman',
+    //     },
+    //     {
+    //       name: 'Waterman',
+    //     },
+    //   ],
+    // });
+    await db.ink.createMany({
       data: [
         {
-          name: 'Famous People',
+          name: 'Platinum',
         },
         {
-          name: 'Movies & TV',
+          name: 'Monteverde',
         },
         {
-          name: 'Musicians',
+          name: 'Diamine',
         },
         {
-          name: 'Games',
+          name: 'Private Reserve',
         },
         {
-          name: 'Animals',
+          name: 'Noodler,s',
         },
         {
-          name: 'Philosophers',
+          name: 'Pilot',
         },
         {
-          name: 'Scientists',
+          name: 'Robert Oster',
+        },
+        {
+          name: 'Pelikan',
         },
       ],
     });
